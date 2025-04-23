@@ -1,0 +1,250 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --accent-color: #f43f5e;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.wallet-buttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 12px 24px;
+    background-color: var(--card-bg);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.app-title {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 80px;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.account-info, .owner-info {
+    text-align: center;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    font-size: 0.9em;
+}
+
+.form-section {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.form-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    background-color: var(--background-color);
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.connect-button, .disconnect-button, .action-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.connect-button {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.connect-button:hover {
+    background-color: #0d9c6d;
+    transform: translateY(-1px);
+}
+
+.disconnect-button {
+    background-color: var(--error-color);
+    color: white;
+}
+
+.disconnect-button:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+.action-button {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.action-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.records-section {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.records-table th,
+.records-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.records-table th {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+}
+
+.records-table tr:hover {
+    background-color: var(--background-color);
+}
+
+.records-table td {
+    color: var(--text-color);
+}
+
+.no-records {
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
+    font-style: italic;
+}
+
+.record-card {
+    background-color: var(--background-color);
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border-left: 3px solid var(--secondary-color);
+    transition: all 0.2s ease;
+}
+
+.record-card:hover {
+    transform: translateX(3px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.record-card p {
+    margin: 6px 0;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.record-card p:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5em;
+        margin-top: 40px;
+    }
+
+    .wallet-buttons {
+        padding: 10px 15px;
+    }
+
+    .records-table {
+        font-size: 0.8em;
+    }
+    
+    .records-table th,
+    .records-table td {
+        padding: 8px;
+    }
+} 
